@@ -5,6 +5,7 @@ type file.txt 就是cat
 git init 命令把這個目錄變成Git可以管理的倉庫
 git add file2.txt file3.txt 把文件修改添加到暫存區
 git commit -m "add 3 files." 把暫存區的所有內容提交到當前分支
+git commit -a -m "message"   add +commit 同時
 git status 目前狀態
 git reflog 查看命令歷史，以便確定要回到未來的哪個版本。
 git reset --hard HEAD~1 回覆上一個commit 版本
@@ -22,4 +23,12 @@ git push origin master 推送最新修改
 創建+ 切換分支： git checkout -b <name>
 合併某分支到當前分支： git merge <name>
 刪除分支： git branch -d <name>
+git log --graph --pretty=oneline --abbrev-commit 查看分支合併圖
+-----------------------------------------------------------------
+git stash  可以把當前工作現場“儲藏”起來，等以後恢復現場後繼續工作
+git stash list 列表
+git stash pop 回到工作現場
+也可用 git stash apply 恢復，但是恢復後，stash 內容並不刪除，你需要用 git stash drop 來刪除
+git stash apply stash@{0} 恢復特定的stash
+
 
