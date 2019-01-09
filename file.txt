@@ -1,1 +1,17 @@
-hello git
+type NUL > EmptyFile.txt 建立新檔案
+start file.txt 編輯檔案
+dir 目錄
+type file.txt 就是cat
+git init 命令把這個目錄變成Git可以管理的倉庫
+git add file2.txt file3.txt 把文件修改添加到暫存區
+git commit -m "add 3 files." 把暫存區的所有內容提交到當前分支
+git status 目前狀態
+git reflog 查看命令歷史，以便確定要回到未來的哪個版本。
+git reset --hard HEAD~1 回覆上一個commit 版本
+git reset --hard commit_id  允許我們在版本的歷史之間穿梭
+git checkout -- file.txt 可以丟棄工作區的修改
+git reset HEAD file.txt 可以把暫存區的修改撤銷掉
+要從版本庫中刪除該文件，那就用命令 git rm 刪掉，並且 git commit
+ssh 的位置在 CH/.ssh
+git push origin master 推送最新修改
+//看到http://xiaosheng.me/ebook/git-tutorial/5-1.html
