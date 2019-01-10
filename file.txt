@@ -2,6 +2,7 @@ type NUL > EmptyFile.txt 建立新檔案
 start file.txt 編輯檔案
 dir 目錄
 type file.txt 就是cat
+git config --get-regexp alias 查看alias列表
 git init 命令把這個目錄變成Git可以管理的倉庫
 git add file2.txt file3.txt 把文件修改添加到暫存區
 git commit -m "add 3 files." 把暫存區的所有內容提交到當前分支
@@ -30,5 +31,9 @@ git stash list 列表
 git stash pop 回到工作現場
 也可用 git stash apply 恢復，但是恢復後，stash 內容並不刪除，你需要用 git stash drop 來刪除
 git stash apply stash@{0} 恢復特定的stash
-
+---------------------------------------------------------------------
+多人工作:
+從本地推送分支，使用 git push origin branch-name ，如果推送失敗，先用 git pull 抓取遠程的新提交；
+在本地創建和遠程分支對應的分支，使用 git checkout -b branch-name origin/branch-name ，本地和遠程分支的名稱最好一致
+建立本地分支和遠程分支的關聯，使用 git branch --set-upstream branch-name origin/branch-name
 
