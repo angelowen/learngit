@@ -12,6 +12,12 @@ github 本地端資料夾上傳:
 3.git pull origin master
 4.git push origin master
 ---------------------------------------------------------------------
+git add 的幾種參數區別:
+
+git add -A保存所有的修改
+git add .保存新的添加和修改，但是不包括刪除
+git add -u保存修改和刪除，但是不包括新建文件。
+---------------------------------------------------------------------
 type NUL > EmptyFile.txt 建立新檔案
 start file.txt 編輯檔案
 dir 目錄
