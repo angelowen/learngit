@@ -1,3 +1,17 @@
+github 本地端資料夾上傳:
+1. 在github上新建一個倉庫，建立時有一個https地址，記錄此地址，後面用 
+2. 開啟git bash，轉到你所要上傳的資料夾目錄下，並輸入git init 
+3. 將專案新增到倉庫中去：git add .，如果新增某個檔案，可以使用git add xxx 
+4. 將新增的檔案提交到倉庫：git commit -m "--註釋--" 
+5. 將倉庫關聯到github：git remote add origin https://xxxx，https為剛才github上建立倉庫的地址 
+6. 把檔案推送到github倉庫：git push -u origin master，下次推送時，可以把-u去掉
+---------------------------------------------------------------------
+重新連結本地端與遠端:
+1.git remote rm origin
+2.git remote add origin https://github.com/XXXXX
+3.git pull origin master
+4.git push origin master
+---------------------------------------------------------------------
 type NUL > EmptyFile.txt 建立新檔案
 start file.txt 編輯檔案
 dir 目錄
@@ -36,4 +50,6 @@ git stash apply stash@{0} 恢復特定的stash
 從本地推送分支，使用 git push origin branch-name ，如果推送失敗，先用 git pull 抓取遠程的新提交；
 在本地創建和遠程分支對應的分支，使用 git checkout -b branch-name origin/branch-name ，本地和遠程分支的名稱最好一致
 建立本地分支和遠程分支的關聯，使用 git branch --set-upstream branch-name origin/branch-name
+---------------------------------------------------------------------
+
 
